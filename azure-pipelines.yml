@@ -11,13 +11,13 @@ variables:
   azureServiceConnectionId: '37cd258c-249b-4f70-a8e5-6141160aa962'
 
   # Web app name
-  webAppName: 'azureFlaskbyTab'
+  webAppName: 'azureFlaskDevOps'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
 
   # Environment name
-  environmentName: 'azureFlaskbyTab'
+  environmentName: 'azureFlaskDevOps'
 
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)
@@ -79,7 +79,7 @@ stages:
             displayName: 'Use Python version'
 
           - task: AzureWebApp@1
-            displayName: 'Deploy Azure Web App : azureFlaskbyTab'
+            displayName: 'Deploy Azure Web App : azureFlaskDevOps'
             inputs:
               azureSubscription: $(azureServiceConnectionId)
               appName: $(webAppName)
